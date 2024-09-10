@@ -1,0 +1,37 @@
+# 종목 토론방
+
+- 종목토론방 API는 주식 투자자들이 실시간으로 종목에 대해 토론하고 정보를 공유할 수 있는 플랫폼을 제공합니다.
+
+## 기술 스택
+
+- Java 21
+- SpringBoot 3.3.2
+- Spring Data JPA 3.3.2
+- Spring Batch 3.3.2
+- Querydsl 5.0.0
+- Spring Data Redis 3.3.2
+- Spring WebFlux 6.0.13
+- Spring Security 3.3.2
+- JJWT 0.12.3
+- Swagger v3 2.2.9
+
+## 데이터베이스
+
+- MySQL 8.0.33
+- Redis 7.0.8
+- AWS S3
+
+## 아키텍쳐
+
+![archtecture](https://private-user-images.githubusercontent.com/167910692/366244688-bdbd69dc-0509-4926-8386-01dc01fc419f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjYwMTAzMTMsIm5iZiI6MTcyNjAxMDAxMywicGF0aCI6Ii8xNjc5MTA2OTIvMzY2MjQ0Njg4LWJkYmQ2OWRjLTA1MDktNDkyNi04Mzg2LTAxZGMwMWZjNDE5Zi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxMFQyMzEzMzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yN2Y5YTlkZDE0ZjYzODEyODA2NDg2MTk1ZmE5MDk5N2I3ZDVkNGM3ZTYyMDNmMjlhYTAzN2NkMDFhNjRiM2EzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.0O0eSaWWSYKO8_m0YLD9kyd8KzoHusK2yPYjT-wqC8Q)
+
+## 주요 기능
+
+|a|a|a| a |
+|--|--|--|--|
+|s|d|a| s |
+|s|d|a| s |
+
+## 🗂️ ERD
+
+![ERD](https://private-user-images.githubusercontent.com/167910692/366017229-370c76b8-c3bc-4192-b041-23a0756a9ae6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjU5NjcyNjMsIm5iZiI6MTcyNTk2Njk2MywicGF0aCI6Ii8xNjc5MTA2OTIvMzY2MDE3MjI5LTM3MGM3NmI4LWMzYmMtNDE5Mi1iMDQxLTIzYTA3NTZhOWFlNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxMFQxMTE2MDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZjk2N2E5YmRjYTZhNjlkMTA3YjY3OGFkYWMyM2EzZTRiOTgzMzFkZmI1MjI0N2Q5OGZjNzRjNDgwNDE4OTkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.OgOjuDCuR6zRChhnOIm5tCAtBjI2ZzNfvJt-jRh-LqM)
