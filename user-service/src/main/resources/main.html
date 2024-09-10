@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종목토론방</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #03C75A;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #03C75A;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .forum-list {
+            margin: 20px 0;
+        }
+
+        .forum-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .forum-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #03C75A;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .write-button {
+            position: fixed;
+            bottom: 70px;
+            right: 30px;
+            padding: 15px 25px;
+            background-color: #03C75A;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .write-button:hover {
+            background-color: #02a348;
+        }
+        .auth-buttons {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .auth-buttons a, .auth-buttons button {
+            margin-left: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #03C75A;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .user-link {
+            color: #03C75A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .user-link:hover {
+            text-decoration: underline;
+        }
+        .auth-buttons {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .auth-buttons a, .auth-buttons button {
+            margin-left: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #03C75A;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>종목토론방</h1>
+    <div class="auth-buttons">
+        <a href="/login" id="loginButton">로그인</a>
+        <a href="/signup" id="signupButton">회원가입</a>
+        <a href="/profile" id="profileButton" style="display: none;">개인정보 수정</a>
+        <button id="logoutButton" style="display: none;" onclick="logout()">로그아웃</button>
+    </div>
+</header>
+<nav>
+    <a href="/">홈</a>
+    <a href="#">종목 검색</a>
+</nav>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="종목을 검색하세요...">
+        <button onclick="searchStocks()">검색</button>
+    </div>
+
+    <div class="forum-list" id="recentPosts">
+        <!-- 여기에 최근 포스트가 동적으로 생성될 예정 -->
+    </div>
+    <div class="pagination-container">
+        <div class="pagination">
+            <button id="prevPage" onclick="changePage(-1)">이전</button>
+            <span id="currentPage">1</span>
+            <button id="nextPage" onclick="changePage(1)">다음</button>
+        </div>
+        <button class="write-button" onclick="location.href='/postwrite'">글쓰기</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 종목토론방. All Rights Reserved.</p>
+</footer>
+
+<script>
+    let currentPage = 0;
+    const pageSize = 10;
+
+    function fetchRecentPosts() {
+        fetch(`/api/posts/recent?page=${currentPage}&size=${pageSize}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('서버 응답 오류');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const postsList = document.getElementById('recentPosts');
+                postsList.innerHTML = '';
+
+                data.content.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.classList.add('forum-item');
+                    postElement.innerHTML = `
+                            <h3>${post.title}</h3>
+                            <p>${post.contents.substring(0, 100)}...</p>
+                            <p class="author">작성자: <a href="/user/${post.userId}" class="user-link">${post.userName}</a></p>
+                            <p class="date">작성일: ${new Date(post.createdAt).toLocaleString()}</p>
+                        `;
+                    postElement.addEventListener('click', (e) => {
+                        if (!e.target.classList.contains('user-link')) {
+                            window.location.href = `/post/${post.id}`;
+                        }
+                    });
+                    postsList.appendChild(postElement);
+                });
+
+                updatePaginationControls(data);
+            })
+            .catch(error => {
+                console.error('포스트 가져오기 오류:', error);
+                alert('포스트를 불러오는 중 오류가 발생했습니다.');
+            });
+    }
+
+    function updatePaginationControls(pageData) {
+        document.getElementById('currentPage').textContent = pageData.pageNo + 1;
+        document.getElementById('prevPage').disabled = pageData.pageNo === 0;
+        document.getElementById('nextPage').disabled = pageData.last;
+    }
+
+
+    function changePage(delta) {
+        currentPage += delta;
+        fetchRecentPosts();
+    }
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function checkLoginStatus() {
+        const jwtToken = getCookie('stockJwtToken');
+        const isLoggedIn = !!jwtToken;
+
+        const loginButton = document.getElementById('loginButton');
+        const signupButton = document.getElementById('signupButton');
+        const logoutButton = document.getElementById('logoutButton');
+        const profileButton = document.getElementById('profileButton');
+
+        if (isLoggedIn) {
+            loginButton.style.display = 'none';
+            signupButton.style.display = 'none';
+            logoutButton.style.display = 'inline-block';
+            profileButton.style.display = 'inline-block';
+        } else {
+            loginButton.style.display = 'inline-block';
+            signupButton.style.display = 'inline-block';
+            logoutButton.style.display = 'none';
+            profileButton.style.display = 'none';
+        }
+    }
+
+    function logout() {
+        document.cookie = 'stockJwtToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        alert('로그아웃되었습니다.');
+        checkLoginStatus();
+        window.location.reload();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchRecentPosts();
+        checkLoginStatus();
+    });
+</script>
+</body>
+</html>

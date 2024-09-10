@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스트 상세</title>
+    <style>
+        .user-link {
+            color: #03C75A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .user-link:hover {
+            text-decoration: underline;
+        }
+        .follow-button {
+            background-color: #03C75A;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .follow-button.following {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #03C75A;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .post-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .post-content {
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #03C75A;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .comment {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .comment-form button {
+            background-color: #03C75A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .edit-button {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .like-button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .like-button.liked {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .like-count {
+            margin-left: 5px;
+        }
+        .comment-form {
+            margin-top: 20px;
+        }
+        .comment-list {
+            margin-top: 20px;
+        }
+        .comment {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>포스트 상세</h1>
+</header>
+<nav>
+    <a th:href="@{/}">홈</a>
+    <a th:href="@{/login}">로그인</a>
+    <a th:href="@{/signup}">회원가입</a>
+</nav>
+
+<div class="container">
+    <h2 class="post-title" th:text="${post.title}">포스트 제목</h2>
+    <div class="post-meta">
+        <span>작성자: <a th:href="@{'/user/' + ${post.userId}}" class="user-link" th:text="${post.userName}"></a></span>
+        <button id="followButton" class="follow-button" th:if="${currentUserId != null and post.userId != null and currentUserId != post.userId}">팔로우</button>
+        <span th:text="'작성일: ' + ${#temporals.format(post.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></span>
+    </div>
+    <div class="post-content" th:text="${post.contents}">포스트 내용</div>
+    <a th:href="@{/}" class="back-button">목록으로 돌아가기</a>
+    <a th:if="${isAuthor}" th:href="@{'/postwrite?id=' + ${post.id}}" class="edit-button">수정하기</a>
+    <button id="likeButton" class="like-button">
+        <span id="likeText">좋아요</span>
+        <span id="likeCount" class="like-count">0</span>
+    </button>
+    <div class="comment-section">
+        <h3>댓글</h3>
+        <div class="comment-form">
+            <textarea id="commentContent" placeholder="댓글을 입력하세요"></textarea>
+            <button onclick="addComment()">댓글 작성</button>
+        </div>
+        <div id="commentList" class="comment-list">
+            <!-- Comments will be dynamically added here -->
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    const postId = [[${post.id}]];
+    const postUserId = [[${post.userId}]];
+    const currentUserId = [[${currentUserId}]];
+    const isAuthor = [[${isAuthor}]];
+    let isLiked = false;
+    let isFollowing = false;
+
+    function loadComments() {
+        fetch(`/api/comments/${postId}`)
+            .then(response => response.json())
+            .then(comments => {
+                const commentsContainer = document.getElementById('commentList');
+                commentsContainer.innerHTML = '';
+                comments.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment';
+                    commentElement.innerHTML = `
+                        <p>${comment.content}</p>
+                        <small>작성자: <a href="/user/${comment.userId}" class="user-link">${comment.userName}</a> | 작성일: ${new Date(comment.createdAt).toLocaleString()}</small>
+                        <button id="likeButton-${comment.id}" class="like-button" onclick="toggleCommentLike(${comment.id})">
+                            <span id="likeText-${comment.id}">좋아요</span>
+                            <span id="likeCount-${comment.id}" class="like-count">0</span>
+                        </button>
+                    `;
+                    commentsContainer.appendChild(commentElement);
+                    loadCommentLikeStatus(comment.id);
+                });
+            })
+            .catch(error => console.error('Error loading comments:', error));
+    }
+    const token = getCookie('stockJwtToken'); // JWT 토큰을 쿠키에서 가져오는 함수
+
+
+    function addComment() {
+        const content = document.getElementById('commentContent').value;
+
+
+        fetch(`/api/comments/${postId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer `+token
+            },
+            body: JSON.stringify({ content: content })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Comment added:', data);
+                document.getElementById('commentContent').value = '';
+                loadComments();
+            })
+            .catch(error => console.error('Error adding comment:', error));
+    }
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function updateLikeButton() {
+        const likeButton = document.getElementById('likeButton');
+        const likeText = document.getElementById('likeText');
+        const likeCountElement = document.getElementById('likeCount');
+
+        if (isLiked) {
+            likeButton.classList.add('liked');
+            likeText.textContent = '좋아요 취소';
+        } else {
+            likeButton.classList.remove('liked');
+            likeText.textContent = '좋아요';
+        }
+        likeCountElement.textContent = likeCount;
+    }
+
+    function loadCommentLikeStatus(commentId) {
+        fetch(`/api/likes/comment/${commentId}`, {
+            headers: {
+                'Authorization': `Bearer `+ token
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                updateCommentLikeButton(commentId, data.liked, data.likeCount);
+            })
+            .catch(error => console.error('Error loading comment like status:', error));
+    }
+
+    function toggleCommentLike(commentId) {
+        fetch(`/api/likes/comment/${commentId}`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer `+token
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                updateCommentLikeButton(commentId, data.liked, data.likeCount);
+            })
+            .catch(error => console.error('Error toggling comment like:', error));
+    }
+
+
+    function loadLikeStatus() {
+        fetch(`/api/likes/post/${postId}`, {
+            headers: {
+                'Authorization': `Bearer `+token
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                isLiked = data.liked;
+                likeCount = data.likeCount;
+                updateLikeButton();
+            })
+            .catch(error => console.error('Error loading like status:', error));
+    }
+
+    function updateCommentLikeButton(commentId, isLiked, likeCount) {
+        const likeButton = document.getElementById(`likeButton-${commentId}`);
+        const likeText = document.getElementById(`likeText-${commentId}`);
+        const likeCountElement = document.getElementById(`likeCount-${commentId}`);
+
+        if (isLiked) {
+            likeButton.classList.add('liked');
+            likeText.textContent = '좋아요 취소';
+        } else {
+            likeButton.classList.remove('liked');
+            likeText.textContent = '좋아요';
+        }
+        likeCountElement.textContent = likeCount;
+    }
+
+
+    function toggleLike() {
+        fetch(`/api/likes/post/${postId}`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer `+token
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                isLiked = data.liked;
+                likeCount = data.likeCount;
+                updateLikeButton();
+            })
+            .catch(error => console.error('Error toggling like:', error));
+    }
+
+    function checkFollowStatus() {
+        const followButton = document.getElementById('followButton');
+        if (followButton && currentUserId && postUserId && currentUserId !== postUserId) {
+            fetch(`/api/follows/is-following/${postUserId}`, {
+                headers: {
+                    'Authorization': `Bearer ${getCookie('stockJwtToken')}`
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    isFollowing = data;
+                    updateFollowButton();
+                })
+                .catch(error => console.error('Error:', error));
+        } else if (followButton) {
+            followButton.style.display = 'none';
+        }
+    }
+
+    function updateFollowButton() {
+        const followButton = document.getElementById('followButton');
+        followButton.textContent = isFollowing ? '언팔로우' : '팔로우';
+        followButton.classList.toggle('following', isFollowing);
+    }
+
+    function toggleFollow() {
+        const method = isFollowing ? 'DELETE' : 'POST';
+        fetch(`/api/follows/${postUserId}`, {
+            method: method,
+            headers: {
+                'Authorization': `Bearer ${getCookie('stockJwtToken')}`
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    isFollowing = !isFollowing;
+                    updateFollowButton();
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    // 페이지 로드 시 실행
+    document.addEventListener('DOMContentLoaded', () => {
+        loadLikeStatus();
+        loadComments();
+        checkFollowStatus();
+        const likeButton = document.getElementById('likeButton');
+        if (likeButton) likeButton.addEventListener('click', toggleLike);
+        const followButton = document.getElementById('followButton');
+        if (followButton) followButton.addEventListener('click', toggleFollow);
+    });
+</script>
+</body>
+</html>
