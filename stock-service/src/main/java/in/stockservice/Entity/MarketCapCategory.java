@@ -1,4 +1,4 @@
-package in.stockservice.Entity;
+package in.stockservice.entity;
 
 public enum MarketCapCategory {
     LARGE_CAP("대형주"),

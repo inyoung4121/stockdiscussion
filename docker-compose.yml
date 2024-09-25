@@ -38,21 +38,7 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
-      - newsfeeddb
-
-  newsfeed-service:
-    build:
-      context: ./newsfeed-service
-      dockerfile: Dockerfile
-      args:
-        - SERVICE_NAME=newsfeed-service
-    ports:
-      - "8082:8082"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
-    depends_on:
-      - eureka-server
+      - kafka
       - userdb
 
   stock-service:
@@ -68,8 +54,8 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
+      - kafka
       - stockdb
-
 
   stockcrawling-service:
     build:
@@ -84,9 +70,9 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
+      - kafka
       - stock-service
       - crawlingdb
-
 
   zookeeper:
     image: wurstmeister/zookeeper
@@ -115,23 +101,17 @@ services:
     volumes:
       - userdb-data:/var/lib/mysql
 
-  newsfeeddb:
-    image: mysql:8.0
-    container_name: newsfeeddb
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: newsfeeddb
-    ports:
-      - "3307:3306"
-    volumes:
-      - newsfeeddb-data:/var/lib/mysql
-
   stockdb:
     image: mysql:8.0
     container_name: stockdb
     environment:
       MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: stockdb
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
     ports:
       - "3308:3306"
     volumes:
@@ -150,7 +130,6 @@ services:
 
 
 volumes:
-  newsfeeddb-data:
   userdb-data:
   stockdb-data:
   crawlingdb-data:

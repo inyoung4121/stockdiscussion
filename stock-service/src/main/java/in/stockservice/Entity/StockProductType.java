@@ -1,4 +1,4 @@
-package in.stockservice.Entity;
+package in.stockservice.entity;
 
 public enum StockProductType {
     STOCK("주식"),

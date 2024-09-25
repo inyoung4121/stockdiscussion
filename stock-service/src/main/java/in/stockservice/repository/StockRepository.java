@@ -1,6 +1,6 @@
 package in.stockservice.repository;
 
-import in.stockservice.Entity.Stock;
+import in.stockservice.entity.Stock;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

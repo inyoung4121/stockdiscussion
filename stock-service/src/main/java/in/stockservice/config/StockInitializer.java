@@ -1,9 +1,9 @@
 package in.stockservice.config;
 
-import in.stockservice.Entity.KoreanStockMarket;
-import in.stockservice.Entity.MarketCapCategory;
-import in.stockservice.Entity.Stock;
-import in.stockservice.Entity.StockProductType;
+import in.stockservice.entity.KoreanStockMarket;
+import in.stockservice.entity.MarketCapCategory;
+import in.stockservice.entity.Stock;
+import in.stockservice.entity.StockProductType;
 import in.stockservice.repository.StockRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

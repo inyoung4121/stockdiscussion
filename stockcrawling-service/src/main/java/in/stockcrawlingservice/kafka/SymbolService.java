@@ -1,6 +1,8 @@
 package in.stockcrawlingservice.kafka;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import in.stockcrawlingservice.dto.symboldto.SymbolRequestDTO;
 import in.stockcrawlingservice.dto.symboldto.SymbolResponseDTO;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +20,7 @@ public class SymbolService {
 
     private final KafkaTemplate<String, SymbolRequestDTO> kafkaTemplate;
     private final ConcurrentHashMap<String, CompletableFuture<SymbolResponseDTO>> pendingRequests = new ConcurrentHashMap<>();
+    private final ObjectMapper objectMapper;
 
     public CompletableFuture<SymbolResponseDTO> requestSymbols() {
         String requestId = UUID.randomUUID().toString();
@@ -32,11 +35,16 @@ public class SymbolService {
         return future;
     }
 
-    @KafkaListener(topics = "symbol-response", groupId = "stockcrawling-group")
-    public void listenSymbolResponses(SymbolResponseDTO response) {
-        CompletableFuture<SymbolResponseDTO> future = pendingRequests.remove(response.getRequestId());
-        if (future != null) {
-            future.complete(response);
+    @KafkaListener(topics = "symbol-response", groupId = "stock-symbol-group")
+    public void listenSymbolResponses(String message) {
+        try {
+            SymbolResponseDTO response = objectMapper.readValue(message, SymbolResponseDTO.class);
+            CompletableFuture<SymbolResponseDTO> future = pendingRequests.remove(response.getRequestId());
+            if (future != null) {
+                future.complete(response);
+            }
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
         }
     }
 }

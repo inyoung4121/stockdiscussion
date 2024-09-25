@@ -1,4 +1,4 @@
-package in.stockservice.Entity;
+package in.stockservice.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
