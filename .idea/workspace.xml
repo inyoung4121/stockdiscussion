@@ -4,263 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97839269-322c-4ca3-849e-19c7d9c33373" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+    <list default="true" id="38e76bdf-ab8f-4f14-a6cb-81dd47e10ca4" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/stockdiscussion.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/stock-service.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/stockcrawling-service.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stockroom.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/auth-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/eureka-server">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/eureka-server/src/main/java/auth-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/gateway-server">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/newsfeed-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/newsfeed-service/stock-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/stock-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/stockcrawling-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/user-service">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="JavaScript File" />
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2kkJW7HNnZbqvy1FjlmfL52JXFC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2msP0u69M9EhzvmlgEb5PIE02tr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build eureka-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build gateway-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build stockcrawling-service.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.stock-service [dependencies].executor&quot;: &quot;Debug&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;데이터베이스 탐지기&quot;,
-    &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.EurekaServerApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.StockcrawlingServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/diddu/IdeaProjects/stockroom/user-service/src/main/java/in/userservice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/diddu/IdeaProjects/stockdiscussion",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\diddu\IdeaProjects\stockroom\user-service\src\main\java\in\userservice" />
-      <recent name="C:\Users\diddu\IdeaProjects\stockroom\gateway-server\src\main\java\in\gatewayserver\redis" />
-      <recent name="C:\Users\diddu\IdeaProjects\stockroom\gateway-server\src\main\java\in\gatewayserver\jwt" />
-      <recent name="C:\Users\diddu\IdeaProjects\stockroom\stockcrawling-service\src\main\java\in\stockcrawlingservice\dto\dailydatadto" />
-      <recent name="C:\Users\diddu\IdeaProjects\stockroom\stock-service\src\main\java\in\stockservice\repository" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\diddu\IdeaProjects\stockroom" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="in.userservice.user.dto" />
-      <recent name="in.stockservice.dto" />
-      <recent name="in.stockservice.Entity" />
-      <recent name="in.stockcrawlingservice.initializer" />
-      <recent name="in.stockcrawlingservice.kafka" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="MicronautRunConfigurationType" />
-        <option value="QuarkusRunConfigurationType" />
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.StockcrawlingServiceApplication">
-    <configuration name="stock-service [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/newsfeed-service/stock-service" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="user-service.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="user-service.main" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="in.auth-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.authservice.AuthServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="eureka-server.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.eurekaserver.EurekaServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="gateway-server.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.gatewayserver.GatewayServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NewsfeedServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="newsfeed-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.newsfeedservice.NewsfeedServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StockServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="stock-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.stockservice.StockServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StockcrawlingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="stockcrawling-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.stockcrawlingservice.StockcrawlingServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="user-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="in.userservice.UserServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.stock-service [dependencies]" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -269,107 +52,19 @@
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="97839269-322c-4ca3-849e-19c7d9c33373" name="Changes" comment="" />
-      <created>1723821674628</created>
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="38e76bdf-ab8f-4f14-a6cb-81dd47e10ca4" name="변경" comment="" />
+      <created>1727862091306</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1723821674628</updated>
-      <workItem from="1723821675752" duration="3162000" />
-      <workItem from="1723882570353" duration="8258000" />
-      <workItem from="1724050455845" duration="10217000" />
-      <workItem from="1724066813845" duration="1452000" />
-      <workItem from="1724068805301" duration="3978000" />
-      <workItem from="1724080548120" duration="917000" />
-      <workItem from="1724130740720" duration="3842000" />
-      <workItem from="1724137217342" duration="753000" />
-      <workItem from="1724138467023" duration="5007000" />
-      <workItem from="1724161136001" duration="1285000" />
-      <workItem from="1724229930277" duration="12149000" />
-      <workItem from="1724290868377" duration="10238000" />
-      <workItem from="1724324668176" duration="545000" />
-      <workItem from="1724325223629" duration="18371000" />
-      <workItem from="1724413106416" duration="4530000" />
-      <workItem from="1724420956548" duration="15164000" />
-      <workItem from="1724721611062" duration="18605000" />
-      <workItem from="1724934620411" duration="2479000" />
-      <workItem from="1724979000867" duration="81000" />
-      <workItem from="1725934892338" duration="1358000" />
-      <workItem from="1725940557188" duration="226000" />
-      <workItem from="1725940794496" duration="77000" />
-      <workItem from="1725940879594" duration="132000" />
-      <workItem from="1725941027369" duration="648000" />
-      <workItem from="1725941695985" duration="871000" />
-      <workItem from="1725942586171" duration="8704000" />
-      <workItem from="1725962618702" duration="6408000" />
-      <workItem from="1725979997636" duration="8114000" />
-      <workItem from="1726101276955" duration="8057000" />
-      <workItem from="1726195890927" duration="1355000" />
-      <workItem from="1726482129869" duration="41000" />
-      <workItem from="1726509923544" duration="3184000" />
-      <workItem from="1726675201662" duration="12119000" />
-      <workItem from="1726697279686" duration="11019000" />
-      <workItem from="1726717380450" duration="2154000" />
-      <workItem from="1726719637339" duration="49000" />
-      <workItem from="1726719703576" duration="323000" />
-      <workItem from="1726721959939" duration="45605000" />
-      <workItem from="1726980185227" duration="5521000" />
-      <workItem from="1726988602544" duration="2503000" />
-      <workItem from="1727055170457" duration="27939000" />
-      <workItem from="1727166483118" duration="2060000" />
-      <workItem from="1727219242581" duration="9427000" />
-      <workItem from="1727248225726" duration="1001000" />
-      <workItem from="1727252804357" duration="10360000" />
-      <workItem from="1727421480605" duration="26000" />
-      <workItem from="1727421516459" duration="2051000" />
-      <workItem from="1727479129289" duration="655000" />
-      <workItem from="1727488033571" duration="1900000" />
-      <workItem from="1727491618574" duration="14000" />
-      <workItem from="1727491805429" duration="55000" />
-      <workItem from="1727679960954" duration="397000" />
-      <workItem from="1727680387149" duration="121000" />
+      <updated>1727862091306</updated>
+      <workItem from="1727862092515" duration="908000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="94633513-d732-48bb-8626-07fbb03d29ed" value="TOOL_WINDOW" />
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="94633513-d732-48bb-8626-07fbb03d29ed">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
