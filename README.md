@@ -92,7 +92,7 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 
 ## 아키텍쳐
 
-![archtecture](https://private-user-images.githubusercontent.com/167910692/372818123-e7a86252-2c32-4e5e-b38a-e53ebcf3cbaf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4NjMwMDMsIm5iZiI6MTcyNzg2MjcwMywicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODE4MTIzLWU3YTg2MjUyLTJjMzItNGU1ZS1iMzhhLWU1M2ViY2YzY2JhZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQwOTUxNDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04ZmRlNDEzYTI2NWQ3ZDA4NTg5MDY2YWM1OGI2MzFmNjdkNzhkMTg4ZDc0Mjg0NzYxYTBlMTRkZmM4MjgzYzUyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.b2y7phMj3BAHjWwaEw8MKEbzmze9k7ldxvu5HYGJlrA)
+![archtecture](https://private-user-images.githubusercontent.com/167910692/372846046-b2bde95c-cda1-4a87-9725-bfaa73453ea5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4NjkyMDQsIm5iZiI6MTcyNzg2ODkwNCwicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODQ2MDQ2LWIyYmRlOTVjLWNkYTEtNGE4Ny05NzI1LWJmYWE3MzQ1M2VhNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQxMTM1MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMGE4NmI1ZTJiZjI5YmJlNzUwZDc0YWVkOWM1MWVmY2FhY2YzNzlkMGI3ZDYyZmVkNDBjMDhjYTkyZTZhM2MzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kUOJIHdstHSQlKI0h56U4xI9DOicVjBs9S0yXI3pu3k)
 
 ## 주요 기능
 
@@ -110,14 +110,39 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 
 ![ERD](https://private-user-images.githubusercontent.com/167910692/372817733-e7218aed-5780-4c7f-9f55-08d918f0d15e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4NjI5MzYsIm5iZiI6MTcyNzg2MjYzNiwicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODE3NzMzLWU3MjE4YWVkLTU3ODAtNGM3Zi05ZjU1LTA4ZDkxOGYwZDE1ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQwOTUwMzZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01OGZlMTRjMDg2NWVhZWIwMTI4MGI1ZDVlZTliZWJiYmYwNTY2NjhkMjQ2MDI5ZTNmYzg4NzBlOTBiZWUzZTdiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.s2ldgJBXsA9_n-9Opb2iO62k-qdWJrxzVZjZtKLe58M)
 
-## 향후 개선사항
-- 쿠버네티스를 활용한 스케일아웃
-
 
 ## 트러블슈팅
+# MSA 아키텍처 최적화 과정
+<details><summary><strong>펼쳐보기</strong></summary>
+
+![아키텍처 변화](https://private-user-images.githubusercontent.com/167910692/372848394-23412a8f-071b-4f3b-9ae7-74b19e5e272d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4Njk3NjAsIm5iZiI6MTcyNzg2OTQ2MCwicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODQ4Mzk0LTIzNDEyYThmLTA3MWItNGYzYi05YWU3LTc0YjE5ZTVlMjcyZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQxMTQ0MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00OTc3ODg4NzUxMmU3N2FjZmNmZjZhZGRlM2RhODE4ZWI2OGE2ZmIwOGQ0Y2ZiMjJmZDUwNGQxZTE1ZTQzZGVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.KCNRI7vuQWrdciSqFDLYw_IIT0folBHQzqHx1G8WW6I)
+
+## 1. 초기 설계 단계
+
+- Docker와 Docker Compose를 활용한 컨테이너화 구현
+    - 각 마이크로서비스를 독립적인 Docker 컨테이너로 패키징
+    - Docker Compose를 사용하여 다중 컨테이너 애플리케이션 정의 및 실행
+
+## 2. 문제 인식
+
+- 프로젝트 진행 중 MSA의 핵심 이점인 확장성 제약 문제 인식
+    - Docker Compose의 한계: 단일 호스트 환경에서의 운영
+    - 동적 스케일링 및 로드 밸런싱의 어려움
+
+## 3. 아키텍처 개선
+
+- Kubernetes 도입 결정 및 구현
+    - 자동화된 배포, 스케일링, 관리 기능 활용
+    - 선언적 구성 관리를 통한 일관성 있는 환경 구축
+    - 롤링 업데이트 및 롤백 기능을 통한 무중단 배포 실현
+
+이러한 최적화 과정을 통해 MSA의 이점을 최대한 활용하고, 시스템의 확장성, 유연성, 그리고 관리 효율성을 크게 향상시켰습니다.
+
+</details>
 
 # Redis 성능 최적화: 사례 연구
-<details><summary><strong>펼처보기</strong></summary>
+
+<details><summary><strong>펼쳐보기</strong></summary>
 
 ## 개요
 - **목표**: 주식 관련 데이터를 위한 Redis 서버 운영
@@ -149,7 +174,7 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 - 발견: 엔티티에 사용된 BigDecimal, String 객체들이 가비지 컬렉션되지 않음
 
 ![VisualVmCapture](https://private-user-images.githubusercontent.com/167910692/372818786-412767f1-85c5-42c6-94d2-9c8172bd6e1c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4NjMxMjcsIm5iZiI6MTcyNzg2MjgyNywicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODE4Nzg2LTQxMjc2N2YxLTg1YzUtNDJjNi05NGQyLTljODE3MmJkNmUxYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQwOTUzNDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNTRiZGRkNTA5NzRkZTFmM2JiNzMwODllY2NkMTJhZDBiOWNiMjIzMTdkYTZjOGQzMGQxNDkzNjZjOGNmZjJjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.tRhVMNSqxEp-l7Sq3Z-fU3Kk1K7I2I2mMtNIH9RJZIU)
-2
+
 ### 근본 원인
 간과한 점: 엔티티 매니저를 명시하지 않더라도 하나의 트랜잭션은 엔티티 매니저가 관리함. 이로 인해 엔티티의 영속성이 유지되어 메모리 누수 발생
 
@@ -189,7 +214,7 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 </details>
 
 # Redis 활용 계획: 주식 데이터 저장 및 성능 최적화
-<details><summary><strong>펼처보기</strong></summary>
+<details><summary><strong>펼쳐보기</strong></summary>
 
 ## 목적
 - 실제 서비스 배포 시 가장 많은 조회가 예상되는 주식 데이터를 저장
@@ -228,6 +253,4 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 - 가장 많이 조회되는 최근 2주일 데이터를 Redis에 저장
 - 평균 79.63% 단축
 
-## 향후 고려사항
-- 레디스 클러스터
 </details>
