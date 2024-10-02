@@ -94,7 +94,6 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 
 ![archtecture](https://private-user-images.githubusercontent.com/167910692/372846046-b2bde95c-cda1-4a87-9725-bfaa73453ea5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4NjkyMDQsIm5iZiI6MTcyNzg2ODkwNCwicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODQ2MDQ2LWIyYmRlOTVjLWNkYTEtNGE4Ny05NzI1LWJmYWE3MzQ1M2VhNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQxMTM1MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMGE4NmI1ZTJiZjI5YmJlNzUwZDc0YWVkOWM1MWVmY2FhY2YzNzlkMGI3ZDYyZmVkNDBjMDhjYTkyZTZhM2MzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kUOJIHdstHSQlKI0h56U4xI9DOicVjBs9S0yXI3pu3k)
 
-## 주요 기능
 
 # 주요 기능
 
@@ -111,8 +110,9 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 ![ERD](https://private-user-images.githubusercontent.com/167910692/372817733-e7218aed-5780-4c7f-9f55-08d918f0d15e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4NjI5MzYsIm5iZiI6MTcyNzg2MjYzNiwicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODE3NzMzLWU3MjE4YWVkLTU3ODAtNGM3Zi05ZjU1LTA4ZDkxOGYwZDE1ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQwOTUwMzZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01OGZlMTRjMDg2NWVhZWIwMTI4MGI1ZDVlZTliZWJiYmYwNTY2NjhkMjQ2MDI5ZTNmYzg4NzBlOTBiZWUzZTdiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.s2ldgJBXsA9_n-9Opb2iO62k-qdWJrxzVZjZtKLe58M)
 
 
-## 트러블슈팅
-# MSA 아키텍처 최적화 과정
+# 트러블슈팅
+
+## MSA 아키텍처 최적화 과정
 <details><summary><strong>펼쳐보기</strong></summary>
 
 ![아키텍처 변화](https://private-user-images.githubusercontent.com/167910692/372848394-23412a8f-071b-4f3b-9ae7-74b19e5e272d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc4Njk3NjAsIm5iZiI6MTcyNzg2OTQ2MCwicGF0aCI6Ii8xNjc5MTA2OTIvMzcyODQ4Mzk0LTIzNDEyYThmLTA3MWItNGYzYi05YWU3LTc0YjE5ZTVlMjcyZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMlQxMTQ0MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00OTc3ODg4NzUxMmU3N2FjZmNmZjZhZGRlM2RhODE4ZWI2OGE2ZmIwOGQ0Y2ZiMjJmZDUwNGQxZTE1ZTQzZGVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.KCNRI7vuQWrdciSqFDLYw_IIT0folBHQzqHx1G8WW6I)
@@ -140,7 +140,42 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 
 </details>
 
-# Redis 성능 최적화: 사례 연구
+## 데이터 처리 최적화
+
+<details><summary><strong>펼쳐보기</strong></summary>
+
+## 개요
+- 약 2800개 종목 처리 필요
+- api 호출 한계로 현재 10종목만 처리 중 (처리 시간: 1초 미만)
+- 모든 종목 처리시 첫 종목과 마지막 종목의 처리 속도는 클 것으로 예상
+
+## 테스트를 위한 인프라 구성
+1. 한국투자증권 API 모방 서버
+- 실시간 데이터 제공
+- 요청 제한 없음
+2. 데이터 처리/정제 서버
+3. 데이터 관리 서버
+
+## 현재 방식
+- Spring Batch, 리더 선출을 통한 중앙 집중식 데이터 처리
+- Kafka를 통한 데이터 전송
+
+## 개선 방식
+1. 데이터 처리 최적화
+- Spring Batch와 Kubernetes 기반 샤딩으로 분산 처리 구현
+2. 데이터 스트리밍 최적화
+- Kafka 파티셔닝을 통한 병렬 스트리밍 구현
+
+## 성능 개선 결과
+
+| 프로세스         | 기존 시간 | 개선 시간 | 개선율 |
+|------------------|-----------|-----------|--------|
+| 데이터 처리      | 11.3 s    | 4.3 s     | 62%    |
+| 데이터 전송      | 700 ms    | 230 ms    | 67%    |
+| 데이터 저장      | 1100 ms   | 330 ms    | 70%    |
+</details>
+
+## Redis 성능 최적화: 사례 연구
 
 <details><summary><strong>펼쳐보기</strong></summary>
 
@@ -213,7 +248,7 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 4. 데이터 처리에서 항상 작은 것이 느리거나 큰 것이 좋은 것은 아님
 </details>
 
-# Redis 활용 계획: 주식 데이터 저장 및 성능 최적화
+## Redis 활용 계획: 주식 데이터 저장 및 성능 최적화
 <details><summary><strong>펼쳐보기</strong></summary>
 
 ## 목적
@@ -255,38 +290,3 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 
 </details>
 
-# 데이터 처리 최적화
-
-<details><summary><strong>펼쳐보기</strong></summary>
-
-
-## 개요
-- 약 2800개 종목 처리 필요
-- api 호출 한계로 현재 10종목만 처리 중 (처리 시간: 1초 미만)
-- 모든 종목 처리시 첫 종목과 마지막 종목의 처리 속도는 클 것으로 예상
-
-## 테스트를 위한 인프라 구성
-1. 한국투자증권 API 모방 서버
-  - 실시간 데이터 제공
-  - 요청 제한 없음
-2. 데이터 처리/정제 서버
-3. 데이터 관리 서버
-
-## 현재 방식
-- Spring Batch, 리더 선출을 통한 중앙 집중식 데이터 처리
-- Kafka를 통한 데이터 전송
-
-## 개선 방식
-1. 데이터 처리 최적화
-  - Spring Batch와 Kubernetes 기반 샤딩으로 분산 처리 구현
-2. 데이터 스트리밍 최적화
-  - Kafka 파티셔닝을 통한 병렬 스트리밍 구현
-
-## 성능 개선 결과
-
-| 프로세스         | 기존 시간 | 개선 시간 | 개선율 |
-|------------------|-----------|-----------|--------|
-| 데이터 처리      | 11.3 s    | 4.3 s     | 62%    |
-| 데이터 전송      | 700 ms    | 230 ms    | 67%    |
-| 데이터 저장      | 1100 ms   | 330 ms    | 70%    |
-</details>
