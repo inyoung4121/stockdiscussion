@@ -260,11 +260,12 @@ https://api.stock.naver.com/chart/domestic/item/{종목코드}/minute?startDateT
 <details><summary><strong>펼쳐보기</strong></summary>
 
 
-## 프로젝트 개요
+## 개요
 - 약 2800개 종목 처리 필요
-- 현재 10종목만 처리 중 (처리 시간: 1초 미만)
+- api 호출 한계로 현재 10종목만 처리 중 (처리 시간: 1초 미만)
+- 모든 종목 처리시 첫 종목과 마지막 종목의 처리 속도는 클 것으로 예상
 
-## 인프라 구성
+## 테스트를 위한 인프라 구성
 1. 한국투자증권 API 모방 서버
   - 실시간 데이터 제공
   - 요청 제한 없음
