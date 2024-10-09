@@ -52,3 +52,8 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS, Asia/Seoul} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS, Asia/Seoul} %5p ${PID:- } --- [%t] %-40.40logger{39} : %m%n%wEx"
+
+
+KIS:
+  APPKey: PSFKTQQ2RiIZYUfxpVu5uGxs9UoOHPaCX5GG
+  APPSecret: QMiQMF6DN28DCCt8er8lddxGx2fpvRyd1e1u5bd/cE/d2I9LV5dbisokDS8MHyIi34ZPFm6Rli/EbHOR+5ckEWN/mco9A7wl8FjKaE4cZI+Ch+lcCmYbmD6ZL98+3Vy6n8swIxkv65UsuXY3kujfyAg6uCY2d2ogTPy/B7E5599uBXnX46k=

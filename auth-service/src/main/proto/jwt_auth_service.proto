@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package envoy.service.auth.v3;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+// gRPC 서비스 정의
+service Authorization {
+  // Check 요청에 대한 정의
+  rpc Check(CheckRequest) returns (CheckResponse);
+}
+
+// Check 요청에 대한 메시지 정의
+message CheckRequest {
+  // HTTP 요청에 대한 메타데이터
+  HttpRequest http_request = 1;
+
+  // gRPC 요청에 대한 메타데이터
+  GrpcRequest grpc_request = 2;
+
+  // 고유한 체크 ID
+  string check_id = 3;
+
+  // 메타데이터 구조
+  google.protobuf.Struct metadata_context = 4;
+}
+
+// Check 응답에 대한 메시지 정의
+message CheckResponse {
+  enum Status {
+    OK = 0;
+    DENIED = 1;
+  }
+
+  Status status = 1;
+
+  // 응답 메시지에 포함될 HTTP 응답
+  HttpResponse http_response = 2;
+}
+
+// HTTP 요청에 대한 메시지 정의
+message HttpRequest {
+  string id = 1;
+  string method = 2;
+  string path = 3;
+  string host = 4;
+  string scheme = 5;
+  string body = 6;
+
+  // 헤더 정보
+  map<string, string> headers = 7;
+
+  // 쿼리 파라미터 정보
+  map<string, string> query_params = 8;
+}
+
+// gRPC 요청에 대한 메시지 정의
+message GrpcRequest {
+  string service = 1;
+  string method = 2;
+
+  // 헤더 정보
+  map<string, string> headers = 3;
+}
+
+// HTTP 응답에 대한 메시지 정의
+message HttpResponse {
+  int32 status = 1;
+  string body = 2;
+
+  // 응답 헤더
+  map<string, string> headers = 3;
+}

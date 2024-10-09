@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gRPC_JWTauth_server
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+jwt:
+  secret: gasfegqwdasdgasfegqwdasdgasfegqwdasdgasfegqwdasdgasfegqwdasqwdasdgasfegqwdasdgasfegqwdasqwdasdgasfegqwdasdgasfegqwdasd
+  expiration: 3600000
+  refresh:
+    expiration: 86400000
