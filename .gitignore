@@ -1,5 +1,5 @@
 HELP.md
-.gradle
+stockcrawling-service/.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -35,3 +35,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# IntelliJ IDEA files
+.idea/
+stockroom.iml
+
+# Application properties
+application.yml
