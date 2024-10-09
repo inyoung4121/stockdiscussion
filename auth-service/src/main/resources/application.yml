@@ -7,6 +7,10 @@ spring:
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
 
+grpc:
+  server:
+    port: 9090
+
 jwt:
   secret: gasfegqwdasdgasfegqwdasdgasfegqwdasdgasfegqwdasdgasfegqwdasqwdasdgasfegqwdasdgasfegqwdasqwdasdgasfegqwdasdgasfegqwdasd
   expiration: 3600000

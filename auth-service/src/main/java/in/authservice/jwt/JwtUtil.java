@@ -1,5 +1,18 @@
 package in.authservice.jwt;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
 import java.security.Key;
 import java.time.Duration;
 import java.util.Date;
@@ -8,6 +21,8 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
+    private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
+
     @Value("${jwt.secret}")
     private String secret;
 
@@ -74,7 +89,6 @@ public class JwtUtil {
     }
 
     public String extractTokenFromRequest(HttpServletRequest request) {
-        Logger logger = LoggerFactory.getLogger(this.getClass());
         String token = null;
 
         // 1. Try to extract from header
