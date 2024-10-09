@@ -35,10 +35,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-# IntelliJ IDEA files
-.idea/
-stockroom.iml
-
-# Application properties
-application.yml
