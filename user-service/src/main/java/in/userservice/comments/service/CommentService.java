@@ -1,13 +1,13 @@
 package in.userservice.comments.service;
 
-import in.userservice.comments.domain.Comment;
+import in.userservice.comments.entity.Comment;
 import in.userservice.comments.dto.CommentDTO;
 import in.userservice.comments.repository.CommentsRepository;
 import in.userservice.newsfeed.service.NewsfeedService;
-import in.userservice.posts.domain.Post;
+import in.userservice.posts.entity.Post;
 import in.userservice.posts.exception.PostNotFoundException;
 import in.userservice.posts.repository.PostsRepository;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import in.userservice.user.exception.UserNotFoundException;
 import in.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

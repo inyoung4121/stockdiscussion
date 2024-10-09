@@ -1,6 +1,5 @@
 package in.userservice.posts.dto;
 
-import in.userservice.user.domain.User;
 import lombok.*;
 
 import java.time.LocalDateTime;

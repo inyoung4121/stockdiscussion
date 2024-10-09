@@ -1,16 +1,16 @@
 package in.userservice.newsfeed.service;
 
-import in.userservice.comments.domain.Comment;
+import in.userservice.comments.entity.Comment;
 import in.userservice.comments.repository.CommentsRepository;
-import in.userservice.follow.domain.Follow;
+import in.userservice.follow.entity.Follow;
 import in.userservice.follow.repository.FollowRepository;
-import in.userservice.like.domain.Like;
+import in.userservice.like.entity.Like;
 import in.userservice.newsfeed.EventType;
-import in.userservice.newsfeed.domain.Newsfeed;
+import in.userservice.newsfeed.entity.Newsfeed;
 import in.userservice.newsfeed.repository.NewsfeedRepository;
-import in.userservice.posts.domain.Post;
+import in.userservice.posts.entity.Post;
 import in.userservice.posts.repository.PostsRepository;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import in.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

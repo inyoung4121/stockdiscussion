@@ -1,8 +1,8 @@
-package in.userservice.comments.domain;
+package in.userservice.comments.entity;
 
 import in.userservice.comments.dto.CommentRequestDTO;
-import in.userservice.posts.domain.Post;
-import in.userservice.user.domain.User;
+import in.userservice.posts.entity.Post;
+import in.userservice.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 

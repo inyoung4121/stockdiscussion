@@ -1,10 +1,9 @@
 package in.userservice.follow.service;
 
-import in.userservice.follow.domain.Follow;
+import in.userservice.follow.entity.Follow;
 import in.userservice.follow.repository.FollowRepository;
-import in.userservice.newsfeed.domain.Newsfeed;
 import in.userservice.newsfeed.service.NewsfeedService;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import in.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

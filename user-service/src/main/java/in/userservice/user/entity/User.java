@@ -1,4 +1,4 @@
-package in.userservice.user.domain;
+package in.userservice.user.entity;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;

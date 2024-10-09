@@ -1,5 +1,5 @@
-package in.userservice.posts.domain;
-import in.userservice.user.domain.User;
+package in.userservice.posts.entity;
+import in.userservice.user.entity.User;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;

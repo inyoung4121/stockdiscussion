@@ -4,78 +4,142 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e76bdf-ab8f-4f14-a6cb-81dd47e10ca4" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/in/authservice/jwt/JwtAuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/in/authservice/jwt/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/k8s/auth-service-dp.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/proto/jwt_auth_service.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="801ffab1-7246-4f0d-8dc2-31562e8484e5" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/stockdiscussion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stockdiscussion.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stockcrawling-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stockcrawling-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/in/authservice/jwt/JwtAuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/in/authservice/jwt/JwtAuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/in/authservice/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/in/authservice/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/Entity/KoreanStockMarket.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/entity/KoreanStockMarket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/Entity/MarketCapCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/entity/MarketCapCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/Entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/entity/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/Entity/StockPriceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/entity/StockPriceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/Entity/StockPriceDataId.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/entity/StockPriceDataId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/Entity/StockProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/in/stockservice/entity/StockProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/domain/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/dto/CommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/repository/CommentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/repository/CommentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/comments/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/follow/domain/Follow.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/follow/entity/Follow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/follow/repository/FollowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/follow/repository/FollowRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/follow/service/FollowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/follow/service/FollowService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/controller/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/domain/Like.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/entity/Like.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/repository/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/like/service/LikeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/newsfeed/domain/Newsfeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/newsfeed/entity/Newsfeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/newsfeed/repository/NewsfeedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/newsfeed/repository/NewsfeedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/newsfeed/service/NewsfeedService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/newsfeed/service/NewsfeedService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/dto/PostDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/dto/PostDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/dto/ResponsePostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/dto/ResponsePostDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/repository/PostsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/repository/PostsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/posts/service/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/domain/Certification.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/entity/Certification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/repository/CertificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/repository/CertificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/in/userservice/user/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/auth-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/stockcrawling-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2msP0u69M9EhzvmlgEb5PIE02tr" />
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2nBmxVhcsIXc9Jy2lB27sglG56q" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/diddu/IdeaProjects/stockdiscussion/auth-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/diddu/IdeaProjects/stockdiscussion/auth-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="src.main.java.in.authservice.jwt" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion" />
+      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\user-service" />
+      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\stockcrawling-service" />
       <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\auth-service" />
-      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\stockcrawling-service\src\main\java\in\stockcrawlingservice\kis" />
-      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\auth-service\src\main" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\k8s-envoy" />
+      <recent name="C:\Users\diddu\IdeaProjects\stockdiscussion\auth-service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="in.authservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StockServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="stock-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="in.stockservice.StockServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -88,29 +152,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="38e76bdf-ab8f-4f14-a6cb-81dd47e10ca4" name="변경" comment="" />
-      <created>1727862091306</created>
+      <changelist id="801ffab1-7246-4f0d-8dc2-31562e8484e5" name="변경" comment="" />
+      <created>1728455091200</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1727862091306</updated>
-      <workItem from="1727862092515" duration="3146000" />
-      <workItem from="1727869512585" duration="1278000" />
-      <workItem from="1727872283271" duration="3190000" />
-      <workItem from="1727875826201" duration="558000" />
-      <workItem from="1728018283297" duration="3209000" />
-      <workItem from="1728374299252" duration="390000" />
-      <workItem from="1728374701499" duration="123000" />
-      <workItem from="1728442391805" duration="89000" />
-      <workItem from="1728442518740" duration="875000" />
-      <workItem from="1728453119651" duration="590000" />
+      <updated>1728455091200</updated>
+      <workItem from="1728455093089" duration="1173000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

@@ -1,7 +1,7 @@
 package in.userservice.like.repository;
 
 import in.userservice.like.comm.LikeType;
-import in.userservice.like.domain.Like;
+import in.userservice.like.entity.Like;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

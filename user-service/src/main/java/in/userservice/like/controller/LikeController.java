@@ -3,14 +3,12 @@ package in.userservice.like.controller;
 
 import in.userservice.jwt.JwtUtil;
 import in.userservice.like.comm.LikeType;
-import in.userservice.like.domain.Like;
 import in.userservice.like.service.LikeService;
 import in.userservice.posts.service.PostsService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

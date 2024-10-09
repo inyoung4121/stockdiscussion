@@ -1,7 +1,7 @@
 package in.userservice.follow.repository;
 
-import in.userservice.follow.domain.Follow;
-import in.userservice.user.domain.User;
+import in.userservice.follow.entity.Follow;
+import in.userservice.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

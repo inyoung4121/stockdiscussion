@@ -1,15 +1,13 @@
 package in.userservice.user.service;
 
-import in.userservice.user.domain.Certification;
+import in.userservice.user.entity.Certification;
 import in.userservice.user.exception.InvalidEmailException;
 import in.userservice.user.repository.CertificationRepository;
 import in.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Random;
 

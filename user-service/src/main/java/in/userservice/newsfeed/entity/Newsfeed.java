@@ -1,7 +1,7 @@
-package in.userservice.newsfeed.domain;
+package in.userservice.newsfeed.entity;
 
 import in.userservice.newsfeed.EventType;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

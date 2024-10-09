@@ -1,7 +1,7 @@
 package in.userservice.comments.dto;
 
 
-import in.userservice.comments.domain.Comment;
+import in.userservice.comments.entity.Comment;
 import lombok.Builder;
 import lombok.Getter;
 

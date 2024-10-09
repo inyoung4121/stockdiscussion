@@ -1,6 +1,6 @@
 package in.userservice.posts.dto;
 
-import in.userservice.posts.domain.Post;
+import in.userservice.posts.entity.Post;
 import lombok.Builder;
 import lombok.Getter;
 

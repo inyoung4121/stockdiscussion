@@ -4,7 +4,7 @@ import in.userservice.S3.S3UploadService;
 import in.userservice.follow.repository.FollowRepository;
 import in.userservice.jwt.JwtUtil;
 import in.userservice.user.dto.*;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import in.userservice.user.exception.InvalidEmailException;
 import in.userservice.user.repository.UserRepository;
 import jakarta.transaction.Transactional;

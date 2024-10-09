@@ -1,7 +1,7 @@
 package in.userservice.newsfeed.repository;
 
-import in.userservice.newsfeed.domain.Newsfeed;
-import in.userservice.user.domain.User;
+import in.userservice.newsfeed.entity.Newsfeed;
+import in.userservice.user.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

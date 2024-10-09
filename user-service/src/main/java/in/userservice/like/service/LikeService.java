@@ -1,18 +1,17 @@
 package in.userservice.like.service;
 
-import in.userservice.like.domain.Like;
+import in.userservice.like.entity.Like;
 import in.userservice.like.repository.LikeRepository;
 import in.userservice.like.comm.LikeType;
 import in.userservice.newsfeed.service.NewsfeedService;
 import in.userservice.posts.repository.PostsRepository;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import in.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service

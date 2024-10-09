@@ -1,7 +1,7 @@
-package in.userservice.like.domain;
+package in.userservice.like.entity;
 
 import in.userservice.like.comm.LikeType;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

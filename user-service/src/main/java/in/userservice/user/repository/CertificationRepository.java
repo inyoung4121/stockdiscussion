@@ -1,6 +1,6 @@
 package in.userservice.user.repository;
 
-import in.userservice.user.domain.Certification;
+import in.userservice.user.entity.Certification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

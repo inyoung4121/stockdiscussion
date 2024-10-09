@@ -1,4 +1,4 @@
-package in.userservice.user.domain;
+package in.userservice.user.entity;
 
 import jakarta.persistence.*;
 import lombok.Builder;

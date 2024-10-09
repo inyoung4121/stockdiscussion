@@ -2,14 +2,14 @@ package in.userservice.posts.service;
 
 
 import in.userservice.newsfeed.service.NewsfeedService;
-import in.userservice.posts.domain.Post;
+import in.userservice.posts.entity.Post;
 import in.userservice.posts.dto.PagedPostResponse;
 import in.userservice.posts.dto.PostDTO;
 import in.userservice.posts.dto.PostDetailDTO;
 import in.userservice.posts.dto.ResponsePostDTO;
 import in.userservice.posts.exception.PostNotFoundException;
 import in.userservice.posts.repository.PostsRepository;
-import in.userservice.user.domain.User;
+import in.userservice.user.entity.User;
 import in.userservice.user.dto.PostSummaryDTO;
 import in.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
